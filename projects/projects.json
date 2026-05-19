@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Student  Management System",
+    "desc": "Web platform for students to register for courses, track attendance, and pay fees. Admins manage records and logs.",
+    "image": "studentregsys",
+    "category": "lamp",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "College Event Management ",
+    "desc": "Web system for managing college events with scheduling, registration, and auto-certificate generation.",
+    "image": "colleventmgmt",
+    "category": "lamp",
+    "links": {
+      "view": "https://www.evento.infinityfreeapp.com/?i=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "E-Commerce Plant Nursery",
+    "desc": "E-commerce platform for plant sales. Features catalog, cart, payment, order tracking, and delivery management.",
+    "image": "plantnursecom",
+    "category": "lamp",
+    "links": {
+      "view": "https://aedangardens.free.nf/?i=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "SPACS Website",
+    "desc": "Website for Students Programming Association of Computer Science to manage members, meetings, and event communication.",
+    "image": "spacs",
+    "category": "basicweb",
+    "links": {
+      "view": "https://spacscec.free.nf/index_original.html?i=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Biometric Ballot System",
+    "desc": "Secure voting system using fingerprint verification and OTP via MXFACE API. Prevents fraud and ensures transparency.",
+    "image": "biometricballot",
+    "category": "lamp",
+    "links": {
+      "view": "https://biometric.free.nf/?i=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Dev-E-Motors Billing Web App",
+    "desc": "Core PHP application to manage scooter billing, stock, customer data, and generate invoices with reporting.",
+    "image": "devemotorsbilling",
+    "category": "lamp",
+    "links": {
+      "view": "https://devemotors.free.nf/",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Restaurant Management System",
+    "desc": "System to manage restaurant operations including tables, menus, orders, and generating sales reports for staff and management.",
+    "image": "restaurantmgmt",
+    "category": "lamp",
+    "links": {
+      "view": "http://www.resturantsen.free.nf/view.php",
+      "code": "#"
+    }
+  },
+  {
+    "name": "EduManage",
+    "desc": "Ongoing Laravel-based educational management system to handle student records, courses, attendance, and assessments with role-based access.",
+    "image": "edumanage",
+    "category": "laravel",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  }
+]

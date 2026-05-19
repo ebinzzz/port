@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="antiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <!-- Levitation base ring -->
+  <ellipse cx="12" cy="18" rx="8" ry="2.5" fill="none" stroke="url(#antiGrad)" stroke-width="1.5" stroke-dasharray="3 1" opacity="0.6"/>
+  <!-- Levitating Diamond core -->
+  <path fill="url(#antiGrad)" d="M12 2 L17 9 L12 16 L7 9 Z" />
+  <!-- Upper halo ring -->
+  <ellipse cx="12" cy="7" rx="5" ry="1.5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+</svg>

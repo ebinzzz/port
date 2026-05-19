@@ -1,0 +1,137 @@
+[
+  {
+    "name": "HTML",
+    "icon": "https://img.icons8.com/color/48/html-5--v1.png",
+    "category": "frontend"
+  },
+  {
+    "name": "CSS",
+    "icon": "https://img.icons8.com/color/48/css3.png",
+    "category": "frontend"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "https://img.icons8.com/color/48/javascript--v1.png",
+    "category": "frontend"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "https://img.icons8.com/color/48/typescript.png",
+    "category": "frontend"
+  },
+  {
+    "name": "React",
+    "icon": "https://img.icons8.com/color/48/react-native.png",
+    "category": "frontend"
+  },
+  {
+    "name": "PHP",
+    "icon": "https://img.icons8.com/officel/48/php-logo.png",
+    "category": "backend"
+  },
+  {
+    "name": "Laravel",
+    "icon": "https://img.icons8.com/fluency/48/laravel.png",
+    "category": "framework"
+  },
+  {
+    "name": "Go",
+    "icon": "https://img.icons8.com/color/48/golang.png",
+    "category": "backend"
+  },
+  {
+    "name": "Python",
+    "icon": "https://img.icons8.com/color/48/python--v1.png",
+    "category": "backend"
+  },
+  {
+    "name": "Django",
+    "icon": "./assets/images/skills/django.svg",
+    "category": "framework"
+  },
+  {
+    "name": "MySQL",
+    "icon": "https://img.icons8.com/fluency/48/mysql-logo.png",
+    "category": "database"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "https://img.icons8.com/color/48/postgreesql.png",
+    "category": "database"
+  },
+  {
+    "name": "phpMyAdmin",
+    "icon": "https://img.icons8.com/fluency/48/database.png",
+    "category": "database"
+  },
+  {
+    "name": "XAMPP",
+    "icon": "https://img.icons8.com/fluency/48/database.png",
+    "category": "database"
+  },
+  {
+    "name": "Java",
+    "icon": "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png",
+    "category": "backend"
+  },
+  {
+    "name": "C",
+    "icon": "https://img.icons8.com/color/48/c-programming.png",
+    "category": "backend"
+  },
+  {
+    "name": "Docker",
+    "icon": "https://img.icons8.com/color/48/docker.png",
+    "category": "tools"
+  },
+  {
+    "name": "Linux",
+    "icon": "https://img.icons8.com/color/48/linux--v1.png",
+    "category": "tools"
+  },
+  {
+    "name": "Postman",
+    "icon": "./assets/images/skills/postman.svg",
+    "category": "tools"
+  },
+  {
+    "name": "Antigravity",
+    "icon": "./assets/images/skills/antigravity.svg",
+    "category": "tools"
+  },
+  {
+    "name": "Gemini",
+    "icon": "./assets/images/skills/gemini.svg",
+    "category": "tools"
+  },
+  {
+    "name": "Claude",
+    "icon": "./assets/images/skills/claude.svg",
+    "category": "tools"
+  },
+  {
+    "name": "GitHub",
+    "icon": "https://img.icons8.com/fluency/48/github.png",
+    "category": "tools"
+  },
+  {
+    "name": "Vscode",
+    "icon": "https://img.icons8.com/?size=100&id=121602&format=png&color=000000",
+    "category": "tools"
+  },
+  {
+    "name": "Canva",
+    "icon": "https://img.icons8.com/color/48/canva.png",
+    "category": "tools"
+  },
+  {
+    "name": "ChatGPT",
+    "icon": "https://img.icons8.com/fluency/48/artificial-intelligence.png",
+    "category": "tools"
+  },
+  {
+    "name": "Blackbox",
+    "icon": "https://img.icons8.com/fluency/48/code.png",
+    "category": "tools"
+  }
+]

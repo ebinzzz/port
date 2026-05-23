@@ -267,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let categoryLabel = 'Project';
       if (project.category === 'lamp') categoryLabel = 'LAMP Stack';
       else if (project.category === 'laravel') categoryLabel = 'Laravel';
+      else if (project.category === 'python') categoryLabel = 'Python';
       else if (project.category === 'basicweb') categoryLabel = 'Basic Web';
 
       // Fallback for image

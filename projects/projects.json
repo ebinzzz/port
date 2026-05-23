@@ -1,6 +1,66 @@
 [
   {
-    "name": "Student  Management System",
+    "name": "Forensic Fingerprint System",
+    "desc": "Web-based forensic fingerprint identification system for case management. Supports biometric scanning, match scoring, and criminal record lookup using MXFACE & custom fingerprint APIs.",
+    "image": "forensicfingerprint",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ebinzzz/forensic_fingerprint_system",
+      "code": "https://github.com/ebinzzz/forensic_fingerprint_system"
+    }
+  },
+  {
+    "name": "Mantra MFS500 Fingerprint Integration",
+    "desc": "Python Flask app for integrating the Mantra MFS500 biometric fingerprint scanner device. Supports live scanning, enrollment, and real-time identity verification via REST APIs.",
+    "image": "mantrafp",
+    "category": "python",
+    "links": {
+      "view": "https://github.com/ebinzzz/mantra-MFS500-python",
+      "code": "https://github.com/ebinzzz/mantra-MFS500-python"
+    }
+  },
+  {
+    "name": "Nexus POS System",
+    "desc": "Modern Point of Sale system with product grid, cart management, transaction history, daily sales reports, and inventory management built for retail use.",
+    "image": "nexuspos",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ebinzzz/nexus_pos",
+      "code": "https://github.com/ebinzzz/nexus_pos"
+    }
+  },
+  {
+    "name": "FarmConnect Platform",
+    "desc": "Agricultural marketplace platform connecting farmers directly with buyers. Features crop listings, live price charts, buyer messaging, and trade analytics built with Python and PHP.",
+    "image": "farmconnect",
+    "category": "python",
+    "links": {
+      "view": "https://github.com/ebinzzz/farmconnect",
+      "code": "https://github.com/ebinzzz/farmconnect"
+    }
+  },
+  {
+    "name": "NEXTGYM Management System",
+    "desc": "Full-featured gym management system with member profiles, subscription plan tracking, real-time attendance, class scheduling, and revenue reporting for fitness centers.",
+    "image": "nextgym",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ebinzzz/NEXTGYM",
+      "code": "https://github.com/ebinzzz/NEXTGYM"
+    }
+  },
+  {
+    "name": "Pharmacy Manager",
+    "desc": "Healthcare pharmacy management system with medicine inventory, prescription tracking, billing, expiry alerts, supplier management, and weekly sales analytics.",
+    "image": "pharmacymanager",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ebinzzz/pharmacy_manager",
+      "code": "https://github.com/ebinzzz/pharmacy_manager"
+    }
+  },
+  {
+    "name": "Student Management System",
     "desc": "Web platform for students to register for courses, track attendance, and pay fees. Admins manage records and logs.",
     "image": "studentregsys",
     "category": "lamp",
@@ -10,13 +70,13 @@
     }
   },
   {
-    "name": "College Event Management ",
+    "name": "College Event Management",
     "desc": "Web system for managing college events with scheduling, registration, and auto-certificate generation.",
     "image": "colleventmgmt",
     "category": "lamp",
     "links": {
       "view": "https://www.evento.infinityfreeapp.com/?i=1",
-      "code": "#"
+      "code": "https://github.com/ebinzzz/evento"
     }
   },
   {
@@ -36,12 +96,12 @@
     "category": "basicweb",
     "links": {
       "view": "https://spacscec.free.nf/index_original.html?i=1",
-      "code": "#"
+      "code": "https://github.com/ebinzzz/spacs_cec"
     }
   },
   {
     "name": "Biometric Ballot System",
-    "desc": "Secure voting system using fingerprint verification and OTP via MXFACE API. Prevents fraud and ensures transparency.",
+    "desc": "Secure voting system using fingerprint verification and OTP via MXFACE API. Prevents fraud and ensures election transparency with audit logs.",
     "image": "biometricballot",
     "category": "lamp",
     "links": {
@@ -50,8 +110,8 @@
     }
   },
   {
-    "name": "Dev-E-Motors Billing Web App",
-    "desc": "Core PHP application to manage scooter billing, stock, customer data, and generate invoices with reporting.",
+    "name": "Dev-E-Motors Billing App",
+    "desc": "Core PHP application to manage scooter billing, stock, customer data, and generate invoices with reporting for a regional motors dealer.",
     "image": "devemotorsbilling",
     "category": "lamp",
     "links": {
@@ -71,12 +131,22 @@
   },
   {
     "name": "EduManage",
-    "desc": "Ongoing Laravel-based educational management system to handle student records, courses, attendance, and assessments with role-based access.",
+    "desc": "Ongoing Laravel-based educational management system to handle student records, courses, attendance, and assessments with role-based access control.",
     "image": "edumanage",
     "category": "laravel",
     "links": {
       "view": "#",
-      "code": "#"
+      "code": "https://github.com/ebinzzz/EduAdmin"
+    }
+  },
+  {
+    "name": "Laravel REST API",
+    "desc": "RESTful API backend built with Laravel featuring JWT authentication, resource controllers, middleware guards, and database migrations for scalable web applications.",
+    "image": "edumanage",
+    "category": "laravel",
+    "links": {
+      "view": "https://github.com/ebinzzz/laravel-api",
+      "code": "https://github.com/ebinzzz/laravel-api"
     }
   }
 ]

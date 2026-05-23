@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   const navLinks = document.querySelectorAll('.navbar ul li a');
   const scrollTopBtn = document.getElementById('scroll-top');
-  
+
   // Toggle Mobile Menu
   if (menuBtn && navbar) {
     menuBtn.addEventListener('click', () => {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Theme Toggle (Dark/Light Mode) ---
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeIcon = themeToggleBtn.querySelector('i');
-  
+
   // Check local storage for theme preference
   const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
   if (savedTheme === 'light') {
@@ -75,61 +75,118 @@ document.addEventListener('DOMContentLoaded', () => {
   themeToggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
     const isLight = document.body.classList.contains('light-mode');
-    
+
     // Save selection
     localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
     themeIcon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
 
     // Update Particles.js colors if it exists
     updateParticlesTheme(isLight);
+    
+    // Update GitHub Stats colors
+    updateGithubStatsTheme(isLight);
   });
 
-  // --- Typed JS Effect ---
-  if (typeof Typed !== 'undefined') {
-    new Typed(".typing-text", {
-      strings: ["frontend development", "backend development", "web designing", "web development"],
-      loop: true,
-      typeSpeed: 50,
-      backSpeed: 25,
-      backDelay: 1000,
-    });
+  // --- Splash Screen & Delayed Animations ---
+  let sr;
+  let introFinished = false;
+
+  function startPageAnimations() {
+    introFinished = true;
+
+    // --- Typed JS Effect ---
+    if (typeof Typed !== 'undefined') {
+      new Typed(".typing-text", {
+        strings: ["frontend development", "backend development", "web designing", "web development"],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 1000,
+      });
+    }
+
+    // --- ScrollReveal Scroll Animations ---
+    if (typeof ScrollReveal !== 'undefined') {
+      sr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 1000,
+        delay: 200,
+        reset: false
+      });
+
+      // Reveal Hero static elements
+      sr.reveal('.home-content', { origin: 'left', distance: '80px' });
+      sr.reveal('.home-image-container', { origin: 'right', distance: '80px', delay: 350 });
+
+      // Reveal Section Titles
+      sr.reveal('.section-title', { delay: 100 });
+
+      // About section elements
+      sr.reveal('.about-img', { origin: 'left', delay: 150 });
+      sr.reveal('.about-info', { origin: 'right', delay: 250 });
+
+      // Timeline elements
+      sr.reveal('.timeline-item', { interval: 150 });
+
+      // Education elements
+      sr.reveal('.edu-card', { interval: 100 });
+
+      // Contact elements
+      sr.reveal('.contact-card', { interval: 100 });
+      sr.reveal('.contact-form-wrapper', { delay: 200 });
+    }
+
+    // Trigger reveals for skills and projects if they loaded during the intro
+    revealSkills();
+    revealProjects();
   }
+
+  function revealSkills() {
+    if (introFinished && sr && document.getElementById('skillsContainer')?.querySelector('.skills-category-card')) {
+      sr.reveal('.skills-category-card', {
+        interval: 150,
+        rotate: { x: 15, y: 15, z: 0 },
+        scale: 0.85,
+        duration: 1200,
+        origin: 'top',
+        distance: '60px'
+      });
+
+      sr.reveal('.skill-card-inner', {
+        interval: 35,
+        delay: 350,
+        scale: 0.9,
+        duration: 800,
+        origin: 'bottom',
+        distance: '20px'
+      });
+    }
+  }
+
+  function revealProjects() {
+    if (introFinished && sr && document.getElementById('projectsContainer')?.querySelector('.project-card')) {
+      sr.reveal('.project-card', { interval: 100 });
+    }
+  }
+
+  // Handle Intro Splash Screen Dismissal
+  const introScreen = document.getElementById('intro-screen');
+  setTimeout(() => {
+    if (introScreen) {
+      introScreen.classList.add('fade-out');
+      setTimeout(() => {
+        introScreen.remove();
+        document.body.classList.remove('intro-active');
+        startPageAnimations();
+      }, 800);
+    } else {
+      startPageAnimations();
+    }
+  }, 2800);
 
   // Initialize mouse spotlight glow on load for static cards
   initGlowEffect();
-
-  // --- ScrollReveal Scroll Animations ---
-  let sr;
-  if (typeof ScrollReveal !== 'undefined') {
-    sr = ScrollReveal({
-      origin: 'top',
-      distance: '60px',
-      duration: 1000,
-      delay: 200,
-      reset: false
-    });
-
-    // Reveal Hero static elements
-    sr.reveal('.home-content', { origin: 'left', distance: '80px' });
-    sr.reveal('.home-image-container', { origin: 'right', distance: '80px', delay: 350 });
-
-    // Reveal Section Titles
-    sr.reveal('.section-title', { delay: 100 });
-
-    // About section elements
-    sr.reveal('.about-img', { origin: 'left', delay: 150 });
-    sr.reveal('.about-info', { origin: 'right', delay: 250 });
-
-    // Timeline elements
-    sr.reveal('.timeline-item', { interval: 150 });
-
-    // Education elements
-    sr.reveal('.edu-card', { interval: 100 });
-
-    // Contact elements
-    sr.reveal('.contact-card', { interval: 100 });
-    sr.reveal('.contact-form-wrapper', { delay: 200 });
-  }
 
   // --- Data Fetching (Skills & Projects) ---
   let allProjects = [];
@@ -192,27 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reinitialize glow effect for new dynamic category cards
     initGlowEffect();
 
-    if (sr) {
-      // 3D Entrance for Category Cards
-      sr.reveal('.skills-category-card', { 
-        interval: 150,
-        rotate: { x: 15, y: 15, z: 0 },
-        scale: 0.85,
-        duration: 1200,
-        origin: 'top',
-        distance: '60px'
-      });
-      
-      // Staggered fade-up for inner skill badges
-      sr.reveal('.skill-card-inner', {
-        interval: 35,
-        delay: 350,
-        scale: 0.9,
-        duration: 800,
-        origin: 'bottom',
-        distance: '20px'
-      });
-    }
+    revealSkills();
   }
 
   // Render Projects
@@ -270,9 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reinitialize glow effect for dynamic project cards
     initGlowEffect();
 
-    if (sr) {
-      sr.reveal('.project-card', { interval: 100 });
-    }
+    revealProjects();
   }
 
   // Set up projects category filter
@@ -300,10 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      
+
       // Feedback UI
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
@@ -372,4 +407,29 @@ document.addEventListener('DOMContentLoaded', () => {
       pJS.fn.particlesRefresh();
     }
   }
+
+  // Helper to update GitHub Stats colors dynamically
+  function updateGithubStatsTheme(isLight) {
+    const titleColor = isLight ? '6d28d9' : '8b5cf6';
+    const textColor = isLight ? '0f172a' : 'f3f4f6';
+    const iconColor = isLight ? '0891b2' : '06b6d4';
+    
+    const statsImg = document.getElementById('gh-stats-img');
+    const langsImg = document.getElementById('gh-langs-img');
+    const streakImg = document.getElementById('gh-streak-img');
+    
+    if (statsImg) {
+      statsImg.src = `https://github-readme-stats-eight-theta.vercel.app/api?username=ebinzzz&show_icons=true&bg_color=00000000&hide_border=true&title_color=${titleColor}&text_color=${textColor}&icon_color=${iconColor}`;
+    }
+    if (langsImg) {
+      langsImg.src = `https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=ebinzzz&layout=compact&bg_color=00000000&hide_border=true&title_color=${titleColor}&text_color=${textColor}`;
+    }
+    if (streakImg) {
+      streakImg.src = `https://github-readme-streak-stats.herokuapp.com/?user=ebinzzz&background=00000000&hide_border=true&ring=${titleColor}&fire=${iconColor}&currStreakLabel=${textColor}&currStreakNum=${textColor}&sideNums=${textColor}&sideLabels=${textColor}&dates=${textColor}`;
+    }
+  }
+  
+  // Initialize GitHub Stats colors on load
+  const isCurrentlyLight = document.body.classList.contains('light-mode');
+  updateGithubStatsTheme(isCurrentlyLight);
 });
